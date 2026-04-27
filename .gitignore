@@ -1,0 +1,20 @@
+# Virtual environment
+agroenv/
+venv/
+
+# Dataset (VERY IMPORTANT)
+PlantVillage/
+
+# Jupyter notebook cache
+.ipynb_checkpoints/
+
+# Zip files
+*.zip
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model files (optional)
+*.h5
+*.keras
