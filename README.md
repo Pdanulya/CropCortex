@@ -33,6 +33,7 @@ python predict.py
 
 ```text
 Clone repo → Download model → Install requirements → Run predict.py
+```
 
 ---
 
