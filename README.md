@@ -57,10 +57,3 @@ The model can predict plant disease from a single leaf image.
 ### Example:
 ```python
 predict_disease("leaf.jpg")
-
-📌 How to Run
-Clone the repository
-Install dependencies:
-pip install -r requirements.txt
-Run the notebook
-Load model and test predictions
