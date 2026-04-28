@@ -15,6 +15,25 @@ To build an AI model that can automatically detect plant diseases from leaf imag
 
 ---
 
+## 🧪 How to Use the Model
+
+1. Download the trained model from the link
+2. Place it in the project folder
+3. Run:
+
+```bash
+python predict.py
+
+4. Replace image path with your own leaf image
+
+
+5. What user workflow looks like
+
+```text
+Clone repo → Download model → Install requirements → Run predict.py
+
+---
+
 ## 📊 Dataset
 - Dataset used: PlantVillage Dataset
 - Total classes: 38 plant disease categories
