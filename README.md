@@ -11,6 +11,10 @@ To build an AI model that can automatically detect plant diseases from leaf imag
 
 ---
 
+## Download Model from Google Drive: https://drive.google.com/file/d/17bfN9TKm21FZL_VzpAVLKud95K7iNa0U/view?usp=drive_link
+
+---
+
 ## 📊 Dataset
 - Dataset used: PlantVillage Dataset
 - Total classes: 38 plant disease categories
