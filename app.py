@@ -264,32 +264,18 @@ with col2:
             predicted_label = class_names[class_index]
             disease_type = get_disease_type(predicted_label)
 
+            # REPLACE YOUR EXISTING ST.METRIC OR CUSTOM BOXES WITH THIS:
             st.markdown(
                 f"""
-                <div style="
-                    background:#0f172a;
-                    color:#ffffff;
-                    padding:18px;
-                    border-radius:16px;
-                    border:1px solid #1e293b;
-                    margin-bottom:14px;
-                    box-shadow:0 8px 24px rgba(0,0,0,0.10);
-                ">
-                    <div style="font-size:0.9rem;color:#cbd5e1;margin-bottom:6px;">Prediction</div>
-                    <div style="font-size:1.2rem;font-weight:700;color:#ffffff;">{format_label(predicted_label)}</div>
-                </div>
-
-                <div style="
-                    background:#14532d;
-                    color:#ffffff;
-                    padding:18px;
-                    border-radius:16px;
-                    border:1px solid #166534;
-                    margin-bottom:14px;
-                    box-shadow:0 8px 24px rgba(0,0,0,0.10);
-                ">
-                    <div style="font-size:0.9rem;color:#dcfce7;margin-bottom:6px;">Confidence</div>
-                    <div style="font-size:1.2rem;font-weight:700;color:#ffffff;">{confidence * 100:.2f}%</div>
+                <div style="display:flex; gap: 10px; margin-bottom:15px;">
+                    <div style="flex:1; background:#0f172a; color:#ffffff; padding:15px; border-radius:16px;">
+                        <div style="font-size:0.8rem; color:#94a3b8;">Prediction</div>
+                        <div style="font-size:1.1rem; font-weight:700;">{format_label(predicted_label)}</div>
+                    </div>
+                    <div style="flex:1; background:#14532d; color:#ffffff; padding:15px; border-radius:16px;">
+                        <div style="font-size:0.8rem; color:#bbf7d0;">Confidence</div>
+                        <div style="font-size:1.1rem; font-weight:700;">{confidence * 100:.2f}%</div>
+                    </div>
                 </div>
                 """,
                 unsafe_allow_html=True
@@ -298,33 +284,28 @@ with col2:
             tab1, tab2 = st.tabs(["Result", "All Probabilities"])
 
             with tab1:
-                if disease_type == "Healthy":
-                    st.markdown(
-                        f"""
-                        <div style="padding:14px 16px;border-radius:14px;background:#dcfce7;color:#14532d;font-weight:600;border:1px solid #86efac;">
-                            Healthy leaf detected: {format_label(predicted_label)}
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                else:
-                    st.markdown(
-                        f"""
-                        <div style="padding:14px 16px;border-radius:14px;background:#fee2e2;color:#991b1b;font-weight:600;border:1px solid #fca5a5;">
-                            Disease detected: {format_label(predicted_label)}
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-
-                st.write("Diagnosis type:", disease_type)
-                st.write("Class index:", class_index)
+                # Use custom div instead of st.success/st.error
+                color_bg = "#dcfce7" if disease_type == "Healthy" else "#fee2e2"
+                color_text = "#14532d" if disease_type == "Healthy" else "#991b1b"
+                
+                st.markdown(
+                    f"""
+                    <div style="padding:15px; border-radius:12px; background:{color_bg}; color:{color_text}; font-weight:600; margin-bottom:10px;">
+                        {"Healthy leaf detected" if disease_type == "Healthy" else "Disease detected"}: {format_label(predicted_label)}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                
+                # Replace st.write with styled custom rows
+                st.markdown(f"**Diagnosis type:** {disease_type}")
+                st.markdown(f"**Class index:** {class_index}")
 
             with tab2:
                 top_k = 5
                 top_indices = np.argsort(prediction)[::-1][:top_k]
                 for idx in top_indices:
-                    st.write(f"{format_label(class_names[idx])}: {prediction[idx] * 100:.2f}%")
+                    st.markdown(f"• **{format_label(class_names[idx])}:** {prediction[idx] * 100:.2f}%")
 
         except Exception as e:
             st.error(f"Prediction failed: {e}")
