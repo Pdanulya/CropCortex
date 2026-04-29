@@ -199,6 +199,218 @@ class_names = [
     'Tomato___Tomato_Yellow_Leaf_Curl_Virus'
 ]
 
+
+disease_info = {
+
+# ---------------- APPLE ----------------
+"Apple___Apple_scab": {
+    "description": "Fungal disease causing dark, scabby lesions on leaves and fruit.",
+    "treatment": "Remove fallen leaves, prune infected branches, and apply fungicide sprays during early growth stages. Improve air circulation around trees."
+},
+
+"Apple___Black_rot": {
+    "description": "Fungal infection causing dark rot on fruits and leaf spots.",
+    "treatment": "Prune dead wood, remove infected fruits, and use protective fungicides. Avoid water stress in trees."
+},
+
+"Apple___Cedar_apple_rust": {
+    "description": "Fungal disease causing orange-yellow spots on leaves.",
+    "treatment": "Remove nearby cedar trees if possible, apply fungicide during early spring, and prune infected leaves."
+},
+
+"Apple___healthy": {
+    "description": "The apple plant shows no signs of disease.",
+    "treatment": "Maintain proper watering, pruning, and balanced fertilization."
+},
+
+# ---------------- BLUEBERRY ----------------
+"Blueberry___healthy": {
+    "description": "Healthy blueberry plant without visible disease.",
+    "treatment": "Ensure acidic soil, proper irrigation, and regular monitoring."
+},
+
+# ---------------- CHERRY ----------------
+"Cherry_(including_sour)___Powdery_mildew": {
+    "description": "White powder-like fungal growth on leaves and shoots.",
+    "treatment": "Apply sulfur-based fungicides, improve air circulation, and remove infected shoots."
+},
+
+"Cherry_(including_sour)___healthy": {
+    "description": "Healthy cherry plant.",
+    "treatment": "Maintain proper pruning and nutrient supply."
+},
+
+# ---------------- CORN ----------------
+"Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "description": "Fungal disease causing gray lesions on corn leaves.",
+    "treatment": "Use resistant varieties, rotate crops, and apply fungicides during early infection."
+},
+
+"Corn_(maize)___Common_rust_": {
+    "description": "Reddish-brown pustules appear on leaves.",
+    "treatment": "Plant resistant hybrids and apply fungicide if severe infection occurs."
+},
+
+"Corn_(maize)___Northern_Leaf_Blight": {
+    "description": "Long gray-green lesions that spread rapidly on leaves.",
+    "treatment": "Crop rotation, resistant seeds, and timely fungicide application."
+},
+
+"Corn_(maize)___healthy": {
+    "description": "Healthy corn plant.",
+    "treatment": "Maintain proper irrigation and soil nutrition."
+},
+
+# ---------------- GRAPE ----------------
+"Grape___Black_rot": {
+    "description": "Fungal disease causing black lesions on fruit and leaves.",
+    "treatment": "Remove infected fruits, prune vines, and apply fungicide sprays during growing season."
+},
+
+"Grape___Esca_(Black_Measles)": {
+    "description": "Wood disease causing leaf discoloration and fruit rot.",
+    "treatment": "Remove infected vines, avoid pruning wounds, and apply protective treatments."
+},
+
+"Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "description": "Brown spots leading to leaf drying.",
+    "treatment": "Use fungicides and ensure proper vineyard ventilation."
+},
+
+"Grape___healthy": {
+    "description": "Healthy grape plant.",
+    "treatment": "Maintain proper pruning, irrigation, and pest monitoring."
+},
+
+# ---------------- ORANGE ----------------
+"Orange___Haunglongbing_(Citrus_greening)": {
+    "description": "Severe bacterial disease causing yellow shoots and bitter fruits.",
+    "treatment": "Remove infected trees, control insect vectors, and use certified healthy plants."
+},
+
+# ---------------- PEACH ----------------
+"Peach___Bacterial_spot": {
+    "description": "Bacterial infection causing dark spots on leaves and fruit.",
+    "treatment": "Use copper-based sprays, avoid overhead irrigation, and prune infected branches."
+},
+
+"Peach___healthy": {
+    "description": "Healthy peach plant.",
+    "treatment": "Maintain balanced fertilization and pest control."
+},
+
+# ---------------- PEPPER ----------------
+"Pepper,_bell___Bacterial_spot": {
+    "description": "Bacterial disease causing dark leaf spots and fruit lesions.",
+    "treatment": "Use disease-free seeds, copper sprays, and avoid wet foliage."
+},
+
+"Pepper,_bell___healthy": {
+    "description": "Healthy pepper plant.",
+    "treatment": "Ensure proper sunlight and watering schedule."
+},
+
+# ---------------- POTATO ----------------
+"Potato___Early_blight": {
+    "description": "Brown concentric spots on leaves caused by fungus.",
+    "treatment": "Apply fungicides, rotate crops, and remove infected leaves."
+},
+
+"Potato___Late_blight": {
+    "description": "Rapidly spreading disease causing leaf and tuber decay.",
+    "treatment": "Apply fungicides immediately, remove infected plants, and avoid overhead watering."
+},
+
+"Potato___healthy": {
+    "description": "Healthy potato plant.",
+    "treatment": "Maintain soil fertility and proper irrigation."
+},
+
+# ---------------- SOYBEAN ----------------
+"Soybean___healthy": {
+    "description": "Healthy soybean plant.",
+    "treatment": "Maintain crop rotation and proper nutrient management."
+},
+
+# ---------------- SQUASH ----------------
+"Squash___Powdery_mildew": {
+    "description": "White powder-like fungus on leaves.",
+    "treatment": "Use fungicides, improve air circulation, and avoid overcrowding plants."
+},
+
+# ---------------- STRAWBERRY ----------------
+"Strawberry___Leaf_scorch": {
+    "description": "Fungal disease causing brown leaf edges and spotting.",
+    "treatment": "Remove infected leaves, apply fungicides, and improve airflow between plants."
+},
+
+"Strawberry___healthy": {
+    "description": "Healthy strawberry plant.",
+    "treatment": "Maintain proper watering and nutrient balance."
+},
+
+# ---------------- TOMATO ----------------
+"Tomato___Bacterial_spot": {
+    "description": "Bacterial disease causing dark spots on leaves and fruit.",
+    "treatment": "Use copper sprays, avoid overhead irrigation, and remove infected plants."
+},
+
+"Tomato___Early_blight": {
+    "description": "Fungal disease causing concentric ring spots on leaves.",
+    "treatment": "Apply fungicides, rotate crops, and remove infected foliage."
+},
+
+"Tomato___Late_blight": {
+    "description": "Severe fungal disease causing dark lesions and plant collapse.",
+    "treatment": "Apply fungicides immediately, remove infected plants, and avoid wet conditions."
+},
+
+"Tomato___Leaf_Mold": {
+    "description": "Fungal disease causing yellow spots and mold under leaves.",
+    "treatment": "Improve ventilation, reduce humidity, and use fungicides."
+},
+
+"Tomato___Septoria_leaf_spot": {
+    "description": "Small dark spots that spread rapidly on leaves.",
+    "treatment": "Remove infected leaves, use fungicides, and avoid overhead watering."
+},
+
+"Tomato___Spider_mites Two-spotted_spider_mite": {
+    "description": "Pest infestation causing yellow speckling on leaves.",
+    "treatment": "Use miticides or neem oil and maintain humidity control."
+},
+
+"Tomato___Target_Spot": {
+    "description": "Fungal disease causing circular target-like lesions.",
+    "treatment": "Apply fungicides and remove infected plant debris."
+},
+
+"Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "description": "Virus causing curled yellow leaves and stunted growth.",
+    "treatment": "Remove infected plants and control whitefly vectors."
+},
+
+"Tomato___Tomato_mosaic_virus": {
+    "description": "Virus causing mosaic patterns on leaves.",
+    "treatment": "Remove infected plants and disinfect tools."
+},
+
+"Tomato___healthy": {
+    "description": "Healthy tomato plant.",
+    "treatment": "Maintain proper watering, fertilization, and pest monitoring."
+}
+
+}
+
+def get_recommendation(label):
+    if label in disease_info:
+        return disease_info[label]
+    else:
+        return {
+            "description": "No specific information available.",
+            "treatment": "Consult an agricultural expert."
+        }
+
 # ---------- Helpers ----------
 def preprocess_image(image):
     image = ImageOps.exif_transpose(image).convert("RGB")
@@ -245,7 +457,6 @@ with st.sidebar:
 
 
 # ---------- Centered Uploader ----------
-# ---------- Centered Professional Uploader ----------
 st.markdown("---")
 
 _, c2, _ = st.columns([0.2, 0.6, 0.2])
@@ -319,6 +530,7 @@ with col2:
             class_index = int(np.argmax(prediction))
             confidence = float(np.max(prediction))
             predicted_label = class_names[class_index]
+            info = get_recommendation(predicted_label)
             disease_type = get_disease_type(predicted_label)
 
             # REPLACE YOUR EXISTING ST.METRIC OR CUSTOM BOXES WITH THIS:
@@ -357,6 +569,42 @@ with col2:
                 # Replace st.write with styled custom rows
                 st.markdown(f"**Diagnosis type:** {disease_type}")
                 st.markdown(f"**Class index:** {class_index}")
+                st.markdown("### Disease Information")
+                # --- Styled Disease Info ---
+                st.markdown("**Description:**")
+                st.markdown(
+                    f"""
+                    <div style="
+                        padding:15px; 
+                        border-radius:12px; 
+                        background:#f3f4f6; 
+                        color:#374151; 
+                        border-left:5px solid #6b7280;
+                        margin-bottom:15px;
+                    ">
+                        {info['description']}
+                    </div>
+                    """, 
+                    unsafe_allow_html=True
+                )
+
+                # --- Styled Treatment (Dark Green) ---
+                st.markdown("**Recommended Treatment:**")
+                st.markdown(
+                    f"""
+                    <div style="
+                        padding:15px; 
+                        border-radius:12px; 
+                        background:#e5efe7; 
+                        color:#166534; 
+                        font-weight:600;
+                        border-left:5px solid #166534;
+                    ">
+                        {info['treatment']}
+                    </div>
+                    """, 
+                    unsafe_allow_html=True
+                )
 
             with tab2:
                 top_k = 5
