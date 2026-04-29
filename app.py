@@ -104,12 +104,10 @@ st.markdown(
 
         /* Cards */
         .metric-card, .section-card {
-            background: rgba(255,255,255,0.95);
-            color: #111827;
-            padding: 1rem 1.2rem;
-            border-radius: 18px;
-            border: 1px solid #dbe4dc;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0;
         }
 
         /* Text helpers */
@@ -312,6 +310,7 @@ with col2:
     else:
         st.write("No prediction yet.")
     st.markdown('</div>', unsafe_allow_html=True)
+
 # ---------- Footer ----------
 st.markdown("---")
 st.caption("Built for fast, clean plant disease screening.")
