@@ -144,6 +144,28 @@ st.markdown(
             background: #14532d;
             color: white;
         }
+
+        /* Tabs */
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 8px;
+        }
+
+        .stTabs [data-baseweb="tab"] {
+            # background: #e5efe7;
+            color: #123524 !important;
+            border-radius: 10px 10px 0 0;
+            padding: 10px 16px;
+            font-weight: 600;
+        }
+
+        .stTabs [aria-selected="true"] {
+            color: #000000 !important;
+        }
+
+        .stTabs [data-baseweb="tab"]:hover {
+            background: #cde8d4;
+            color: #123524 !important;
+        }
     </style>
     """,
     unsafe_allow_html=True
