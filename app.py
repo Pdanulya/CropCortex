@@ -64,6 +64,9 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
+import pandas as pd
+import plotly.express as px
+import time
 
 st.set_page_config(
     page_title="Plant Disease Detection",
@@ -225,16 +228,72 @@ st.markdown(
 
 # ---------- Sidebar ----------
 with st.sidebar:
-    st.markdown("## ⚙️ Controls")
-    uploaded_file = st.file_uploader(
-        "Upload leaf image",
-        type=["jpg", "jpeg", "png"],
-        label_visibility="visible"
-    )
-    st.markdown("### Model info")
-    st.write("• Input size: 224 × 224")
-    st.write(f"• Classes: {len(class_names)}")
-    st.write("• Output: disease label + confidence")
+    st.markdown("# ⚙️ Settings")
+    st.markdown("## Model Info")
+    st.write("• Input Size: 224 × 224")
+    st.write(f"• Disease Types: {len(class_names)}")
+    st.write("• Output: Disease Label + Confidence ")
+    st.markdown("---")
+
+    st.markdown("# 📸 Support")
+    st.markdown("## Image Capture Tips")
+    st.write("☀️ Natural Daylight")
+    st.write("🚫 Avoid Shadows")
+    st.write("🔍 Capture Effected Area Clearly")
+    st.write("🍃 Single Leaf Centered in the Image")
+    st.write("🌱 Plain Background (sky, soil, hand) ")
+
+
+# ---------- Centered Uploader ----------
+# ---------- Centered Professional Uploader ----------
+st.markdown("---")
+
+_, c2, _ = st.columns([0.2, 0.6, 0.2])
+
+with c2:
+    # 1. Container for the card
+    with st.container():
+        st.markdown(
+            """
+            <div style="
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 20px;
+                border: 2px dashed #166534;
+                text-align: center;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            ">
+                <h3 style="color:#123524; margin-top:0;">📤 Upload Leaf Image</h3>
+                <p style="color:#4b5563; font-size:0.9rem; margin-bottom: 20px;">
+                    Select or drag-and-drop a clear image of the plant leaf.
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        # 2. Use a CSS override to "push" the uploader up into the div
+        st.markdown(
+            """
+            <style>
+                /* Target the file uploader within this specific column */
+                [data-testid="stFileUploader"] {
+                    margin-top: -110px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        uploaded_file = st.file_uploader(
+            "", 
+            type=["jpg", "jpeg", "png"],
+            label_visibility="collapsed"
+        )
+
+        st.markdown("---")
 
 # ---------- Main Layout ----------
 col1, col2 = st.columns([1.05, 0.95], gap="large")
