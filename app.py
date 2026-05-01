@@ -117,6 +117,7 @@ def load_plant_model():
 
 model = load_plant_model()
 
+# ---------- Class Names(dynamically loaded instead of manual list) ----------
 import json
 
 with open("class_indices.json", "r") as f:
@@ -124,7 +125,7 @@ with open("class_indices.json", "r") as f:
 
 class_names = {v: k for k, v in class_indices.items()}
 
-
+# ---------- Disease Information & Treatment Recommendations ----------
 disease_info = {
 
 "Apple___Apple_scab": {
