@@ -76,7 +76,8 @@ Clone repo → Download model → Install requirements → Run predict.py
 - Classification Report generated (Precision, Recall, F1-score)
 
 ---
-##  Medium Article: 
+## 📃 Medium Article: 
+https://medium.com/@poojanidanulya/ever-wondered-how-ai-sees-images-heres-the-answer-575991c83d0f 
 
 ---
 
