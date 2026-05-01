@@ -76,6 +76,9 @@ Clone repo → Download model → Install requirements → Run predict.py
 - Classification Report generated (Precision, Recall, F1-score)
 
 ---
+##  Medium Article: 
+
+---
 
 ## 🌿 Prediction System
 The model can predict plant disease from a single leaf image.
