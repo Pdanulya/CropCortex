@@ -548,7 +548,7 @@ st.markdown(
     """
     <div class="hero">
         <h1>🌿 Plant Disease Detection</h1>
-        <p>Upload a leaf image, analyze it instantly, and view a clean diagnosis dashboard.</p>
+        <p>Upload a leaf image, analyze it instantly, and get a detailed diagnosis with treatment recommendations.</p>
     </div>
     """,
     unsafe_allow_html=True
