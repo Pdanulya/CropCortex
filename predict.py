@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # Load trained model
-model = load_model("plant_disease_model.keras")
+model = load_model("plant_disease_final.keras")
 
 # Class names (REPLACE with your actual classes if needed)
 class_names = [
