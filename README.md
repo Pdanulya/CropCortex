@@ -80,6 +80,8 @@ Clone repo → Download model → Install requirements → Run predict.py
 https://medium.com/@poojanidanulya/ever-wondered-how-ai-sees-images-heres-the-answer-575991c83d0f 
 
 ---
+##  Demo Video: 
+https://www.dropbox.com/scl/fi/ijmfdoo81vajf4zleu7dp/Recording-2026-04-30-000717.mp4?rlkey=q0rp5rq2lh4pvx9yt34iyn2lk&st=uqxq8cqb&dl=0
 
 ##  Prediction System
 The model can predict plant disease from a single leaf image.
